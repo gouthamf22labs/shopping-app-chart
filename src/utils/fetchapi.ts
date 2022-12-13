@@ -2,7 +2,8 @@ async function fetchapi(api: string) {
   try {
     const response = await fetch(api);
     const data = await response.json();
-    return data;
+    console.log(data.result);
+    return data.result;
   } catch (err) {
     console.log(err);
   }

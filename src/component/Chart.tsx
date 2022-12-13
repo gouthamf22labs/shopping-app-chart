@@ -12,10 +12,10 @@ import {
 function Chart({ productData }: any) {
   return (
     <div className="w-full h-full flex flex-col ">
-      <div className="lg:w-[700px] lg:h-[500px] md:w-[600px] md:h-[300px] rounded-lg shadow-lg m-2 pr-6 bg-white">
+      <div className="lg:w-[763px] lg:h-[500px] md:w-[760px] md:h-[300px] rounded-lg shadow-lg m-2 pr-6 bg-white">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            width={300}
+            width={320}
             height={200}
             data={productData}
             margin={{
@@ -26,13 +26,13 @@ function Chart({ productData }: any) {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
+            <XAxis dataKey="Title" />
             <YAxis />
             <Tooltip />
             <Legend />
             <Line
               type="monotone"
-              dataKey="price"
+              dataKey="Price"
               stroke="#227C70"
               strokeDasharray="3 4 5 2"
             />

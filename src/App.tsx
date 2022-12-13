@@ -11,7 +11,7 @@ function App() {
   const fetchfunction = useCallback(async () => {
     try {
       setLoading(true);
-      const data = await fetchapi(apiconfig.productsapi);
+      const data = await fetchapi(apiconfig.newapi);
       console.log(data);
       if (data?.length) {
         setproductData(data);
@@ -28,7 +28,7 @@ function App() {
   }, [fetchfunction]);
 
   return (
-    <div className="mx-auto my-0 xw-full h-full lg:w-[1020px] lg:h-full ">
+    <div className="mx-auto my-0 w-full h-full lg:w-[1020px] lg:h-full ">
       {loading ? (
         <div>
           <h1 className="w-full h-full flex justify-center items-center">
